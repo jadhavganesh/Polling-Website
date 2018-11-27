@@ -1,0 +1,8 @@
+db.sqlite3
+poll/__pycache__
+poll/migrations/__pycache__
+mysite/__pycache__
+.idea
+poll/migrations/0*
+
+
