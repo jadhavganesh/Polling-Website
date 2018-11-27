@@ -1,0 +1,13 @@
+
+{% extends "poll/base.html" %}
+{% load i18n %}
+{% load poll_tags %}
+
+
+
+{% block poll_content %}
+<h4>Hurray!!! Here is your coupen code <b>{{ coupon }}</b> Thank you</h4>
+<h4>Enjoy shopping here <a href="http://nyasta.in" target="_blank" > Nyasta.in</a> </h4>
+
+{% include "poll/footer.html" %}
+{% endblock %}

@@ -1,0 +1,58 @@
+
+{% load staticfiles %}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+    <title>Vote</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" type="text/css" href="{% static 'poll/bootstrap/bootstrap.min.css' %}"/>
+    <link rel="stylesheet" type="text/css" href="{% static 'poll/bootstrap/jumbotron.css' %}"/>
+    <link rel="stylesheet" type="text/css" href="{% static 'poll/bootstrap/ie10-viewport-bug-workaround.css' %}"/>
+    <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+    <script src="{% static 'poll/bootstrap/bootstrap.min.js' %}"></script>
+    <script src="{% static 'poll/bootstrap/ie-emulation-modes-warning.js' %}"></script>
+    
+</head>
+
+<body>
+{% include "poll/header.html" %}
+<div class="container-fluid text-center">
+  <div class="row content">
+      <div class="col-sm-2 sidenav">
+      
+    </div>
+
+       <div class="col-sm-8 text-left">
+{% load i18n %}
+
+{% block poll_script %}
+	
+{% endblock %}
+
+<div id="poll_container">
+	
+	{% block poll_content %}
+		
+	{% endblock %}
+</div>
+
+          {% include "poll/footer.html" %}
+      </div> 
+</div>
+</div>
+
+
+ <!-- Bootstrap core JavaScript
+    ================================================== -->
+    <!-- Placed at the end of the document so the pages load faster -->
+    <script src="{% static 'poll/bootstrap/jquery.min.js' %}"></script>
+    <script>window.jQuery || document.write('<script src="../../assets/js/vendor/jquery.min.js"><\/script>')</script>
+    <script src="{% static 'poll/bootstrap/bootstrap.min.js' %}"></script>
+    <!-- IE10 viewport hack for Surface/desktop Windows 8 bug -->
+    <script src="{% static 'poll/bootstrap/ie10-viewport-bug-workaround.js' %}"></script>
+</body>
+</html>
